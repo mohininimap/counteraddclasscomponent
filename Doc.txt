@@ -1,0 +1,58 @@
+npm i bootstrap@4.1.1
+---------------------------------
+
+import 'bootstrap/dist/css/bootstrap.css';
+
+components=>2 ways to create compoment 1)functional component 2)class componente
+React.Fragment
+
+state => It is a special property in a react object
+{}=>to render value dynamically
+=>inline style
+------------------
+
+Dynamic rendering classes
+
+Rendering List
+
+Whenever using map() we have to set key otherwise come error->react-jsx-dev-runtime.development.js:73 
+Warning: Each child in a list should have a unique "key" prop.
+key should be an unique
+--------
+conditional rendering=>
+
+*Templating engine
+------------------
+Trusy and falsy value
+empty ->falsy value,atleast 1 character trusy value
+------------------------
+standard DOM event =>onKeyDown,onKeyPress,onKeyUp
+------------------------
+=============================
+handleIncrement(){
+console.log("Increment CLicked",this)
+}
+
+//obj.method() ->Here this return refence to the object
+Here this is refence to the object
+
+If standalone function() it return by default refernce to the window object but if strict mode enabled it returns to the undefined so that the case we don't have
+access to the this
+----------------------
+
+constructor(){
+console.log("Constructor",this)
+}
+
+//Here error is come ->this is not allowed to before super() 
+
+this.handleIncrement.bind(this)
+
+bind methods create new reference
+
+this is always refering to the current object
+
+Every event handler code write this in class component
+this.handleIncrement=this.handleIncrement.bind(this)
+
+OR use arrow function .arrow function don't remind the this keyword
